@@ -1,2 +1,2 @@
-# covid19-malaria-letter
+# covid19-antimalarials-letter
  
