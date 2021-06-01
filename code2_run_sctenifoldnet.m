@@ -11,9 +11,9 @@ X=[X0 X1];
 
 
 rng default
-T=sctenifoldnet_m(X0,X1,genelist,'nsubsmpl',20);
+T=sctenifoldnet(X0,X1,genelist,'nsubsmpl',20);
 writetable(T,'res1.txt');
 
-Tf=e_fgsea(T);
+Tf=e_fgsearun(T);
 writetable(Tf,'res2.txt');
 
