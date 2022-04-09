@@ -5,15 +5,14 @@
 [genelist,i,j]=intersect(g0,g1);
 X0=X0(i,:);
 X1=X1(j,:);
-X0=sc_selectc(X0,100);
-X1=sc_selectc(X1,100);
-X=[X0 X1];
+X0=sc_selectc(X0,100,0);
+X1=sc_selectc(X1,100,0);
 
 
 rng default
-T=sctenifoldnet(X0,X1,genelist,'nsubsmpl',20);
+T=ten.sctenifoldnet(X0,X1,genelist,'nsubsmpl',20);
 writetable(T,'res1.txt');
 
-Tf=e_fgsearun(T);
+Tf=ten.e_fgsearun(T);
 writetable(Tf,'res2.txt');
 
